@@ -6,6 +6,9 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { FaRegEnvelope } from "react-icons/fa";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa6";
+import { CiCircleMore } from "react-icons/ci";
+
 
 
 
@@ -47,12 +50,12 @@ const LeftSidebar = () => {
                         <h2>Premium</h2>
                     </div>
                     <div className='flex gap-5 cursor-pointer py-6'>
-                        <GoHomeFill className='text-3xl' />
-                        <h2>Home</h2>
+                        <FaRegUser className='text-3xl' />
+                        <h2>Profile</h2>
                     </div>
                     <div className='flex gap-5 cursor-pointer py-6'>
-                        <GoHomeFill className='text-3xl' />
-                        <h2>Home</h2>
+                        <CiCircleMore className='text-3xl' />
+                        <h2>More</h2>
                     </div>
                     <div className='flex gap-5 cursor-pointer py-6'>
                         <button className='bg-white text-black text-lg font-semibold px-24 py-3 rounded-full'>Post</button>
