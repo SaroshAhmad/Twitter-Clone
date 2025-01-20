@@ -5,6 +5,8 @@ import { IoSearch } from "react-icons/io5";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { FaRegEnvelope } from "react-icons/fa";
 import { HiOutlineUsers } from "react-icons/hi2";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 
 
@@ -41,8 +43,8 @@ const LeftSidebar = () => {
                         <h2>Communities</h2>
                     </div>
                     <div className='flex gap-5 cursor-pointer py-6'>
-                        <GoHomeFill className='text-3xl' />
-                        <h2>Home</h2>
+                        <FaXTwitter className='text-3xl' />
+                        <h2>Premium</h2>
                     </div>
                     <div className='flex gap-5 cursor-pointer py-6'>
                         <GoHomeFill className='text-3xl' />
