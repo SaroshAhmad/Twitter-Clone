@@ -35,7 +35,7 @@ const LeftSidebar = () => {
                 {menuItems.map((item, index) => (
                     <div
                         key={index}
-                        className="flex items-center gap-4 text-xl px-4 py-3 hover:bg-zinc-900 rounded-full cursor-pointer transition-colors"
+                        className="flex items-center gap-4 text-xl px-4 py-6 hover:bg-zinc-900 rounded-full cursor-pointer transition-colors"
                     >
                         {item.icon}
                         <span className="pr-4 font-normal">{item.label}</span>
