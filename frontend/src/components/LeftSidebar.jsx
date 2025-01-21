@@ -9,61 +9,48 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa6";
 import { CiCircleMore } from "react-icons/ci";
 
-
-
-
-
-
-
 const LeftSidebar = () => {
+    const menuItems = [
+        { icon: <GoHomeFill className="text-2xl" />, label: "Home" },
+        { icon: <IoSearch className="text-2xl" />, label: "Explore" },
+        { icon: <IoNotificationsOutline className="text-2xl" />, label: "Notifications" },
+        { icon: <FaRegEnvelope className="text-2xl" />, label: "Messages" },
+        { icon: <HiOutlineUsers className="text-2xl" />, label: "Communities" },
+        { icon: <FaXTwitter className="text-2xl" />, label: "Premium" },
+        { icon: <FaRegUser className="text-2xl" />, label: "Profile" },
+        { icon: <CiCircleMore className="text-2xl" />, label: "More" }
+    ];
+
     return (
-        <div>
-            <div>
-                <div>
-                    <a href="#">
-                        <img width={24} src={logo} alt="X-logo" className='hover: cursor-pointer' />
-                    </a>
-                </div>
-                <div className='text-white text-2xl py-6'>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <GoHomeFill className='text-3xl' />
-                        <h2>Home</h2>
+        <div className="fixed flex flex-col px-3 text-white">
+            {/* Logo section */}
+            <div className="p-3 mb-2">
+                <a href="/" className="w-12 h-12 flex items-center justify-center hover:bg-zinc-900 rounded-full transition-colors">
+                    <img src={logo} alt="X logo" className="w-7 h-7" />
+                </a>
+            </div>
+
+            {/* Navigation Menu */}
+            <nav className="flex-1">
+                {menuItems.map((item, index) => (
+                    <div
+                        key={index}
+                        className="flex items-center gap-4 text-xl px-4 py-3 hover:bg-zinc-900 rounded-full cursor-pointer transition-colors"
+                    >
+                        {item.icon}
+                        <span className="pr-4 font-normal">{item.label}</span>
                     </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <IoSearch className='text-3xl' />
-                        <h2>Explore</h2>
-                    </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <IoNotificationsOutline className='text-3xl' />
-                        <h2>Notifications</h2>
-                    </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <FaRegEnvelope className='text-3xl' />
-                        <h2>Messages</h2>
-                    </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <HiOutlineUsers className='text-3xl' />
-                        <h2>Communities</h2>
-                    </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <FaXTwitter className='text-3xl' />
-                        <h2>Premium</h2>
-                    </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <FaRegUser className='text-3xl' />
-                        <h2>Profile</h2>
-                    </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <CiCircleMore className='text-3xl' />
-                        <h2>More</h2>
-                    </div>
-                    <div className='flex gap-5 cursor-pointer py-6'>
-                        <button className='bg-white text-black text-lg font-semibold px-24 py-3 rounded-full'>Post</button>
-                    </div>
-                </div>
+                ))}
+            </nav>
+
+            {/* Post Button */}
+            <div className="px-3 my-4">
+                <button className="w-full bg-white hover:bg-zinc-200 text-black font-bold py-3.5 rounded-full transition-colors">
+                    Post
+                </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default LeftSidebar
+export default LeftSidebar;

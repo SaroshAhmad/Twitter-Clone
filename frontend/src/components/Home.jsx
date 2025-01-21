@@ -5,7 +5,7 @@ import RightSidebar from './RightSidebar'
 
 const Home = () => {
     return (
-        <div className='flex justify-between mx-72'>
+        <div className='flex justify-between w-[80%] mx-auto'>
             <LeftSidebar />
             <Feed />
             <RightSidebar />
