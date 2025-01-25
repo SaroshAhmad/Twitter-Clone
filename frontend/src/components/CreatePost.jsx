@@ -34,6 +34,7 @@ const CreatePost = () => {
             {/* Post input area */}
             <div className="flex p-4">
                 <div className="w-12 h-12 rounded-full bg-zinc-700 flex-shrink-0" />
+                <img src="" alt="" />
                 <div className="flex-1 ml-4">
                     <textarea
                         value={postText}
