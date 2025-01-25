@@ -26,29 +26,40 @@ const Tweet = () => {
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores, eum ut vitae doloribus beatae delectus animi consequuntur neque eaque similique repellat, omnis velit. Facere minus facilis blanditiis dolorum eos!</p>
                     </div>
                     <div className='flex justify-between'>
-                        <div className='flex items-center'>
-                            <div className='p-2 text-gray-500 hover:bg-green-200 rounded-full hover:text-blue-500'>
+                        <div className='flex items-center  cursor-pointer'>
+                            <div className='p-2 text-gray-500  hover:text-blue-500'>
                                 <FaRegComment size="20px" />
                             </div>
                             <p className='ml-2'>0</p>
                         </div>
-                        <div className='flex justify-between'>
-                            <BiRepost size="24px" />
+                        <div className='flex items-center cursor-pointer'>
+                            <div className='p-2 text-gray-500 hover:text-green-500'>
+                                <BiRepost size="24px" />
+                            </div>
                             <p className='ml-2'>0</p>
                         </div>
-                        <div className='flex justify-between'>
-                            <CiHeart size="24px" />
+                        <div className='flex items-center cursor-pointer'>
+                            <div className='p-2 text-gray-500 hover:text-red-500'>
+                                <CiHeart size="24px" />
+                            </div>
+                            <p className='ml-2'>0</p>
+
+                        </div>
+                        <div className='flex items-center cursor-pointer'>
+                            <div className='p-2 text-gray-500 hover:text-blue-500'>
+                                <FiBarChart2 size="24px" />
+                            </div>
                             <p className='ml-2'>0</p>
                         </div>
-                        <div className='flex justify-between'>
-                            <FiBarChart2 size="24px" />
-                            <p className='ml-2'>0</p>
+                        <div className='flex items-center cursor-pointer'>
+                            <div className='p-2 text-gray-500 hover:text-blue-500'>
+                                <CiBookmark size="20px" />
+                            </div>
                         </div>
-                        <div className='flex justify-between'>
-                            <CiBookmark size="20px" />
-                        </div>
-                        <div className='flex justify-between'>
-                            <FiShare size="20px" />
+                        <div className='flex items-center cursor-pointer'>
+                            <div className='p-2 text-gray-500 hover:text-blue-500'>
+                                <FiShare size="20px" />
+                            </div>
                         </div>
                     </div>
                 </div>
