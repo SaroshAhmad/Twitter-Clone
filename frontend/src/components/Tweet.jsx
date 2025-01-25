@@ -14,7 +14,7 @@ import { FiShare } from "react-icons/fi";
 
 const Tweet = () => {
     return (
-        <div>
+        <div className='border-b border-stone-800'>
             <div className='flex p-4'>
                 <Avatar src='https://pbs.twimg.com/profile_images/1448239823/IMG_0001_400x400.jpg' size='40' round={true} />
                 <div className='ml-2'>

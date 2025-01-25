@@ -8,6 +8,10 @@ const Feed = () => {
             <div className="sticky top-0 z-10 backdrop-blur-xl bg-black/70">
                 <CreatePost />
                 <Tweet />
+                <Tweet />
+                <Tweet />
+                <Tweet />
+                <Tweet />
             </div>
             {/* Add posts here */}
         </div>
