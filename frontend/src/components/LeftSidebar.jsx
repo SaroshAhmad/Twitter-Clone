@@ -22,31 +22,34 @@ const LeftSidebar = () => {
     ];
 
     return (
-        <div className="fixed flex flex-col px-3 text-white">
-            {/* Logo section */}
-            <div className="p-3 mb-2">
+        <div className="h-full p-2 lg:p-4">
+            {/* Logo */}
+            <div className="p-2 lg:p-3 mb-2">
                 <a href="/" className="w-12 h-12 flex items-center justify-center hover:bg-zinc-900 rounded-full transition-colors">
                     <img src={logo} alt="X logo" className="w-7 h-7" />
                 </a>
             </div>
 
             {/* Navigation Menu */}
-            <nav className="flex-1">
+            <nav className="mb-4">
                 {menuItems.map((item, index) => (
                     <div
                         key={index}
-                        className="flex items-center gap-4 text-xl px-4 py-6 hover:bg-zinc-900 rounded-full cursor-pointer transition-colors"
+                        className="flex items-center justify-center lg:justify-start gap-4 text-xl p-3 hover:bg-zinc-900 rounded-full cursor-pointer transition-colors group"
                     >
-                        {item.icon}
-                        <span className="pr-4 font-normal">{item.label}</span>
+                        <div className="flex items-center justify-center w-12 h-12">
+                            {item.icon}
+                        </div>
+                        <span className="hidden lg:block pr-4">{item.label}</span>
                     </div>
                 ))}
             </nav>
 
             {/* Post Button */}
-            <div className="px-3 my-4">
-                <button className="w-full bg-white hover:bg-zinc-200 text-black font-bold py-3.5 rounded-full transition-colors">
-                    Post
+            <div className="px-2">
+                <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold p-3 rounded-full transition-colors">
+                    <span className="hidden lg:block">Post</span>
+                    <span className="lg:hidden">+</span>
                 </button>
             </div>
         </div>
