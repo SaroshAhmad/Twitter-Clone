@@ -2,6 +2,7 @@ import React from 'react';
 import LeftSidebar from './LeftSidebar';
 import Feed from './Feed';
 import RightSidebar from './RightSidebar';
+import { Outlet } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -14,7 +15,7 @@ const Home = () => {
 
                 {/* Main Content */}
                 <main className="flex flex-grow ml-[88px] lg:ml-[275px]">
-                    <Feed />
+                    <Outlet />
                     <RightSidebar />
                 </main>
             </div>
