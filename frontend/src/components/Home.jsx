@@ -1,28 +1,32 @@
-import React from 'react';
-import LeftSidebar from './LeftSidebar';
-import Feed from './Feed';
-import RightSidebar from './RightSidebar';
-import { Outlet } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import LeftSidebar from './LeftSidebar'
+import RightSidebar from './RightSidebar'
+import { Outlet, useNavigate } from "react-router-dom";
+import useOtherUsers from '../hooks/useOtherUsers';
+import { useSelector } from "react-redux";
+import useGetMyTweets from '../hooks/useGetMyTweets';
+
 
 const Home = () => {
+    const { user, otherUsers } = useSelector(store => store.user);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!user) {
+            navigate("/login");
+        }
+    }, []);
+    // custom Hook
+    useOtherUsers(user?._id);
+    useGetMyTweets(user?._id);
+
     return (
-        <div className="min-h-screen bg-black text-white">
-            <div className="max-w-7xl mx-auto flex relative">
-                {/* Left Sidebar */}
-                <header className="fixed w-[88px] lg:w-[275px] h-screen flex flex-col">
-                    <LeftSidebar />
-                </header>
-
-                {/* Main Content */}
-                <main className="flex flex-grow ml-[88px] lg:ml-[275px]">
-                    <Outlet />
-                    <RightSidebar />
-                </main>
-            </div>
+        <div className='flex justify-between w-[80%] mx-auto'>
+            <LeftSidebar />
+            <Outlet />
+            <RightSidebar otherUsers={otherUsers} />
         </div>
-    );
-};
-
-
+    )
+}
 
 export default Home
